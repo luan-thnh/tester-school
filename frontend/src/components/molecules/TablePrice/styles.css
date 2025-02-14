@@ -1,0 +1,70 @@
+.table {
+    resize: none;
+    /* table-layout: fixed; */
+}
+th,
+td {
+    border-right: 1px solid #e4e4e4;
+}
+.css-nwdtn5-area {
+    display: none;
+}
+th > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+    font-weight: 600px;
+    border-bottom: 1px solid #e4e4e4;
+    height: 56px;
+    color: #01559b;
+}
+td > div {
+    overflow: unset !important;
+    white-space: wrap !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 8px;
+    word-break: break-all;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 15.5px;
+    color: #3a3b3c;
+}
+
+.flex-col {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #a2a5a9;
+}
+.col-subTitle {
+    color: #a2a5a9;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.css-1xc17u0-Table {
+    overflow-x: auto !important;
+    overflow-y: hidden !important;
+}
+.col-action > div {
+    display: flex;
+    gap: 8px;
+}
+
+.td:nth-of-type(10) > div,
+.td:nth-of-type(11) > div {
+    padding: 0 !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    height: 100% !important;
+}

@@ -1,0 +1,27 @@
+server:
+  port: 8000
+
+spring:
+  datasource:
+    # Cập nhật URL kết nối đến cơ sở dữ liệu PostgreSQL trên Render
+    url: jdbc:postgresql://dpg-cumrivlds78s73eqbnf0-a.oregon-postgres.render.com:5432/test_school_db
+    username: test_school_db_user
+    password: AnOTYbQ4sJ1OKyaLCKPezpvEutsWZt1n
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate.format_sql: true
+
+  thymeleaf:
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false
+    mode: HTML
+    encoding: UTF-8
+
+  jwt:
+    signerKey: '44G4LjP6LKI6ECmzy8p5oocl+CLSyjcKca+rNxiA3bajEWAJVPvaA+16f/J7d8dz'

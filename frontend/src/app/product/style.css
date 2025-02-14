@@ -1,0 +1,40 @@
+.table th {
+    border-left: 1px solid #E4E4E4;
+    border-top: 1px solid #E4E4E4;
+    font-size: 12px;
+    font-weight: 600;
+    height: 56px;
+    color: #01559B;
+}
+
+
+
+/* Table Data  */
+.table td {
+    border-left: 1px solid #E4E4E4;
+    font-size: 13px;
+    font-weight: normal;
+    line-height: 15.51px;
+    color: "#3A3B3C";
+    height: 56px;
+}
+
+.table2 th {
+    border-bottom: 1px solid;
+    border-color: #E4E4E4;
+    height: 48px;
+    color: #01559B;
+
+}
+
+/* Alternative Table Data  */
+.table2 td {
+    font-size: 13px;
+    font-weight: normal;
+    border-bottom: 1px solid;
+    border-color: #E4E4E4;
+    color: #3A3B3C;
+    height: 72px;
+    padding-left: 8px;
+    padding-right: 8px;
+}
