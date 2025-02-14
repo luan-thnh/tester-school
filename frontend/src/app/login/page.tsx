@@ -33,6 +33,7 @@ function Login() {
     const router = useRouter();
     useEffect(() => {
         // Tự động điền username và password nếu có trong localStorage
+
         const savedEmail = localStorage.getItem("rememberedEmail");
         const savedPassword = localStorage.getItem("rememberedPassword");
         if (savedEmail && savedPassword) {

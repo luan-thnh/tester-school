@@ -16,6 +16,7 @@ export default function Home() {
     const router = useRouter();
     useEffect(() => {
         const checkToken = () => {
+            if (typeof window === "undefined") return;
             const token = localStorage.getItem("authToken");
             if (!token) {
                 router.push("/login");

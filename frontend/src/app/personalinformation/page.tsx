@@ -12,6 +12,7 @@ const PersonalInformation = () => {
 
     useEffect(() => {
         if (!user) {
+            if (typeof window === "undefined") return;
             const storedUser = localStorage.getItem("user");
             if (storedUser) {
                 setUser(JSON.parse(storedUser));
@@ -19,7 +20,11 @@ const PersonalInformation = () => {
         }
     }, [user, setUser]);
 
-    const authToken = localStorage.getItem("authToken");
+    let authToken = "";
+
+    if (typeof window !== "undefined") {
+        localStorage.getItem("authToken");
+    }
 
     useEffect(() => {
         const fetchData = async () => {
