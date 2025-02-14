@@ -12,7 +12,6 @@ export const RegisterUser = async (
     username: string,
     password: string,
     confirmPassword: string,
-    companyId: string,
     birthday: string
 ) => {
     console.log(
@@ -21,7 +20,6 @@ export const RegisterUser = async (
         username,
         password,
         confirmPassword,
-        companyId,
         birthday
     );
     try {
@@ -31,7 +29,7 @@ export const RegisterUser = async (
             firstName,
             lastName,
             confirmPassword,
-            companyId,
+            companyId: null,
             birthday
         });
         console.log("response", response);

@@ -20,7 +20,6 @@ function Register() {
         username: "",
         password: "",
         confirmPassword: "",
-        company: "",
         birthday: ""
     });
     const [errors, setErrors] = useState<{
@@ -29,7 +28,6 @@ function Register() {
         firstName?: string;
         lastName?: string;
         confirmPassword?: string;
-        company?: string;
         birthday?: string;
     }>({
         firstName: "",
@@ -37,7 +35,6 @@ function Register() {
         username: "",
         password: "",
         confirmPassword: "",
-        company: "",
         birthday: ""
     });
     const router = useRouter();
@@ -65,13 +62,11 @@ function Register() {
     const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
         const {value} = e.target;
         setFormData({
-            ...formData,
-            company: value
+            ...formData
         });
         setIsSuccess(true); // Đặt trạng thái là thành công khi thay đổi
         setErrors({
-            ...errors,
-            company: validateField(fieldInput.COMPANY, value) // Kiểm tra lỗi của công ty
+            ...errors
         });
     };
     console.log("response", companyRef);
@@ -101,10 +96,6 @@ function Register() {
             fieldInput.PASSWORD,
             formData.confirmPassword
         );
-        const companyError = validateField(
-            fieldInput.COMPANY,
-            formData.company
-        );
         const firstNameError = validateField(
             fieldInput.NAME,
             formData.firstName
@@ -116,7 +107,6 @@ function Register() {
         );
 
         if (
-            companyError ||
             usernameError ||
             passwordError ||
             confirmPasswordError ||
@@ -130,7 +120,6 @@ function Register() {
                 firstName: firstNameError,
                 lastName: lastNameError,
                 confirmPassword: confirmPasswordError,
-                company: companyError,
                 birthday: birthdayError
             });
             return;
@@ -146,7 +135,6 @@ function Register() {
                 formData.username,
                 formData.password,
                 formData.confirmPassword,
-                formData.company,
                 formData.birthday
             );
 
@@ -238,21 +226,6 @@ function Register() {
                         placeholder="ConfirmPassword"
                         value={formData.confirmPassword}
                         handleOnChange={handleInputChange}
-                    />
-                    <p className="mb-6"></p>
-                    <Input
-                        optionSelect={company}
-                        isError={!!errors.company}
-                        helperText={errors.company}
-                        size="large"
-                        type="company"
-                        label="Company"
-                        require
-                        variant="select"
-                        name="company"
-                        placeholder="Company"
-                        value={formData.company}
-                        handleSelectChange={handleSelectChange}
                     />
                     <p className="mb-6"></p>
                     <Input
